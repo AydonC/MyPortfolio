@@ -1,0 +1,60 @@
+.navbar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 20px; /* The height of the area to hover over */
+    z-index: 1000;
+  }
+  
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    padding: 0 ;
+    height: 50px; /* Height of the navbar when visible */
+  }
+  
+  .navbar-logo {
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    margin-right: auto;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-links li {
+    color: white;
+    padding: 20px;
+    transition: color 0.2s;
+    cursor: pointer;
+  }
+  
+  .nav-links li:hover {
+    color: #1bb7d3;
+    animation: bounce 1s infinite;
+  }
+  
+
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0); 
+    }
+    40% {
+        transform: translateY(-15px); 
+    }
+    60% {
+        transform: translateY(-10px); 
+    }
+  }
