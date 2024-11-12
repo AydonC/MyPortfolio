@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import './Home.css'
 import AboutMe from './AboutMe';
 import Wave from './assets/wave.png'
+import Cartoon from './assets/cartoon.png'
 
 
 function Home() {
@@ -17,7 +18,7 @@ function Home() {
       </div>
 
       <div className='intro'>
-      <img src="src\assets\cartoon.png" alt="" width="200" height="200" />
+      <img src={Cartoon} alt="" width="200" height="200" />
         <p>Hello <img src={Wave} alt=""style={{height:'40px',width:'40px'}} />, I am Aydon Cupido. </p> 
       </div>
       <div className='avatar'>
