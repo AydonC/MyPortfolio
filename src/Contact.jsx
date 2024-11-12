@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import emailjs from 'emailjs-com';
 import './Contact.css';
-import Github from './assets/github_3291685.png'
+import Github from './assets/github_3291695.png'
 import LinkedIn from './assets/linkedin_3536569.png'
 import Email from './assets/email.png'
 
