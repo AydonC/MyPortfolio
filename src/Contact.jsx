@@ -1,6 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import emailjs from 'emailjs-com';
 import './Contact.css';
+import Github from './assets/github_3291685.png'
+import LinkedIn from './assets/linkedin_3536569.png'
+import Email from './assets/email.png'
+
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -65,30 +69,24 @@ const Contact = () => {
             <p>If you ever want to connect and <br></br> discuss some ideas, feel free <br></br>  to reach out to me. Click on one<br></br>  of the links below to connect with <br></br> me via socials or pop a message using <br></br> the  form on the right.</p>
 
             <h2>Find me on:</h2>
-            <a href="https://instagram.com/ay.cupido18/">
-              <img
-                src="/src/assets/instagram_1384015.png"
-                style={{ height: '50px', width: '50px' }}
-              />
-            </a>
             &nbsp;&nbsp;&nbsp;&nbsp;
             <a href="https://www.linkedin.com/in/aydon-jon-cupido-22b513286">
               <img
-                src="src/assets/linkedin_3536569.png"
+                src={LinkedIn}
                 style={{ height: '50px', width: '50px' }}
               />
             </a>
             &nbsp;&nbsp;&nbsp;&nbsp;
             <a href="https://github.com/AydonC">
               <img
-                src="src/assets/github_3291695.png"
+                src={Github}
                 style={{ height: '50px', width: '50px' }}
               />
             </a>
             &nbsp;&nbsp;&nbsp;&nbsp;
             <a href="mailto:cupido.aydon@gmail.com">
               <img
-                src="src/assets/email.png"
+                src={Email}
                 style={{ height: '50px', width: '50px' }}
               />
             </a>
