@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import "./About.css";
 import Toolkit from "./toolkit";
 import People from './assets/people.png'
+import Avatar from './assets/avatar.jpg'
 
 const AboutMe = () => {
   const titleRef = useRef(null);
@@ -34,7 +35,7 @@ const AboutMe = () => {
           <h1 className="title hidden" ref={titleRef}><u>ABOUT ME <img src={People} alt=""style={{height:'100px',width:'100px'}} /></u></h1>
           <div className="profile-section">
             <img
-              src="src/assets/avatar.jpg"
+              src={Avatar}
               alt="Profile"
               className="profile-pic hidden"
               ref={profilePicRef}
