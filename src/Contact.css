@@ -1,0 +1,112 @@
+.contact-page {
+    position: relative;
+    width: 100vw; /* Ensure it spans the full viewport width */
+    padding: 80px 0; /* Add padding only to the top and bottom */
+    margin: 0; 
+    background-color: rgb(216, 194, 164);
+    color: #000000;
+    box-sizing: border-box; /* Include padding in width */
+}
+
+h3 {
+    font-family: 'Courier New', monospace;
+    filter: drop-shadow(0 3px 1em #9e4c00);
+}
+
+label {
+    margin-bottom: 5px;
+    font-family: 'Courier New', monospace;
+    filter: drop-shadow(0 3px 1em #9e4c00);
+}
+
+input,
+textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%; /* Set to 100% for responsiveness */
+    max-width: 500px; /* Limit max width */
+}
+
+button {
+    padding: 10px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border-radius: 30px;
+    cursor: pointer;
+    width: 100%; /* Set to 100% for responsiveness */
+    max-width: 200px; /* Limit max width */
+}
+
+button:hover {
+    background-color: #000000;
+    color: white;
+    border-style: double;
+}
+
+.contact-form-container {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.contact-form-container.slide-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.footer {
+    padding: 10px;
+    font-size: 12px;
+}
+
+.footerDiv{
+    background-color: #9e4c00;
+}
+
+.heading {
+    font-family: "Courier New", cursive;
+    filter: drop-shadow(0 2px 1em #9e4c00);
+}
+
+.quickMessage {
+    position: absolute;
+    text-align: left;
+    font-family: 'Courier New', monospace;
+    margin-left: 200px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .quickMessage {
+        position: relative; /* Change position for smaller screens */
+        margin-left: 0; /* Remove left margin */
+        text-align: center; /* Center text */
+    }
+
+    input,
+    textarea {
+        width: 90%; /* Adjust width for smaller screens */
+    }
+
+    button {
+        width: 90%; /* Adjust button width for smaller screens */
+    }
+
+    .contact-page {
+        padding: 40px 0; /* Reduce padding on smaller screens */
+        margin: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    h3,
+    label {
+        font-size: 1.2em; /* Increase font size for better readability */
+    }
+
+    .footer {
+        font-size: 0.9em; /* Adjust footer font size */
+    }
+}

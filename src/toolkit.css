@@ -1,0 +1,228 @@
+/* Slide-in animation */
+.hidden {
+    opacity: 0;
+    transform: translateY(50px); /* Slide in from below */
+    transition: all 0.6s ease-out;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0); /* Slide into position */
+}
+
+.slide {
+    animation: slide-in 2s infinite linear; /* Slide animation */
+    filter: drop-shadow(0 0 1em #ffffff);
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateY(20px);
+        opacity: 0.8;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.fade {
+    animation: fade-in 5s infinite linear; /* Fade animation */
+    filter: drop-shadow(0 0 1em #ffffff);
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0.7;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.bounce {
+    animation: bounce 5s infinite linear; /* Bounce animation */
+    filter: drop-shadow(0 0 1em #ffffff);
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+.zoom {
+    animation: pulse-animation 4s infinite;
+    filter: drop-shadow(0 0 1em #ffffff);
+}
+
+@keyframes pulse-animation {
+    0% {
+        transform: scale(1); 
+        opacity: 1; 
+    }
+    50% {
+        transform: scale(1.2); 
+        opacity: 0.8; 
+    }
+    100% {
+        transform: scale(1); 
+        opacity: 1; 
+    }
+}
+
+.rotate {
+    animation: shake-animation 5s infinite; /* Rotate animation */
+    filter: drop-shadow(0 0 1em #ffffff);
+}
+
+@keyframes shake-animation {
+    0% { transform: translate(0); }
+    10% { transform: translate(-10px, 0); }
+    20% { transform: translate(10px, 0); }
+    30% { transform: translate(-10px, 0); }
+    40% { transform: translate(10px, 0); }
+    50% { transform: translate(-10px, 0); }
+    60% { transform: translate(10px, 0); }
+    70% { transform: translate(-10px, 0); }
+    80% { transform: translate(10px, 0); }
+    90% { transform: translate(-10px, 0); }
+    100% { transform: translate(0); }
+}
+
+.spin {
+    animation: spin 5s infinite linear; /* Spin animation */
+    filter: drop-shadow(0 0 1em #ffffff);
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+label {
+    margin-left: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-family: "Courier New", cursive;
+    text-shadow: 0 0px 50px #6b3a02;
+}
+
+.toolkit-labels {
+    display: flex;
+    justify-content: center; /* Center items vertically */
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-family: "Courier New", cursive;
+    text-shadow: 0 0px 50px #6b3a02;
+}
+
+.toolkit-icons {
+    margin-left: 20px;
+    display: flex;
+    gap: 100px;
+    margin-bottom: 200px;
+    justify-content: center; /* Center items vertically */
+    text-align: center;
+}
+
+.toolkit-icon {
+    height: 100px;
+    width: 100px;
+}
+
+.heading {
+    margin-bottom: 200px;
+    font-size: 30px;
+    font-family: "Courier New", cursive;
+    filter: drop-shadow(0 3px 1em #9e4c00);
+    color: #ffffff;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+    .heading {
+        font-size: 24px;
+        margin-bottom: 150px;
+    }
+
+    .toolkit-icons {
+        gap: 50px; /* Reduce gap between icons */
+        margin-bottom: 100px;
+    }
+
+    .toolkit-icon {
+        height: 80px; /* Adjust icon size */
+        width: 80px;
+    }
+
+    label {
+        margin-left: 20px;
+        padding: 20px; /* Adjust padding for smaller screens */
+        font-size: 20px;
+        
+    }
+}
+
+@media (max-width: 768px) {
+    .heading {
+        font-size: 20px;
+        margin-bottom: 100px;
+    }
+
+    .toolkit-icons {
+        margin-bottom: 80px;
+        gap:30px;
+    }
+
+    .toolkit-icon {
+        height: 30px;
+        width: 30px;
+    }
+
+    label {
+        margin-left: 10px;
+        padding: 10px; /* Further adjust padding */
+        font-size: 10px;
+        padding-left: 20px;
+        padding-right: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .heading {
+        font-size: 18px;
+        margin-bottom: 50px;
+        text-align: center; /* Center the heading */
+    }
+
+    .toolkit-icons {
+        margin-left: 0; /* Remove left margin for mobile */
+        margin-bottom: 40px;
+        gap:40px;
+    }
+
+    .toolkit-icon {
+        height: 30px;
+        width: 30px;
+    }
+
+    label {
+        margin-left: 0; /* Center labels */
+        padding: 5px;
+        font-size: 10px;
+        padding-left: 20px;
+        padding-right: 15px;
+    }
+}

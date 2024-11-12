@@ -1,0 +1,197 @@
+.projects-container {
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+    margin-top: 20px;
+    background-size: cover;
+    color: white;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.card {
+    width: 200px;
+    height: 300px;
+    margin: 15px;
+    perspective: 1000px;
+    transition: transform 0.5s;
+}
+
+.card-inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 98%;
+    height: 100%;
+    backface-visibility: hidden;
+    align-items: center;
+    justify-content: center;
+    padding: 7px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    color: white;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    background-color: rgba(68, 68, 68, 0.9);
+}
+
+.card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-0 .card-front {
+    background-color: #723700;
+    border: 2px solid #fdfdfd;
+}
+
+.card-1 .card-front {
+    background-color: #99ccff;
+    border: 2px solid #ffffff;
+}
+
+.card-2 .card-front {
+    background-color: #3399ff;
+    border: 2px solid #ffffff;
+}
+
+.card-3 .card-front {
+    background-color: #303030;
+    border: 2px solid #ffffff;
+}
+
+.card-4 .card-front {
+    background-color: #662013;
+    border: 2px solid #ffffff;
+}
+
+.card-0 .card-back {
+    background:url('./assets/note.png');
+    background-size: cover;
+    filter: drop-shadow(0 3px 1em #ffffff);
+    text-shadow: -1px -1px 0 #000,  /* Top-left */
+    1px -1px 0 #000,   /* Top-right */
+    -1px 1px 0 #000,   /* Bottom-left */
+    1px 1px 0 #000,    /* Bottom-right */
+    0 0 5px #ffffff,   /* Small glow */
+    0 0 10px #ffffff,  /* Medium glow */
+    0 0 20px #ffffff,  /* Larger glow */
+    0 0 30px #ffffff;  /* Soft, outer glow */
+}
+
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8); /* Adjust the opacity as needed */
+    pointer-events: none;
+    z-index: -1; 
+}
+
+.card-1 .card-back {
+    background:url('./assets/hangman.PNG');
+    background-size: cover;
+    filter: drop-shadow(0 3px 1em #ffffff);
+    text-shadow: -1px -1px 0 #000,  /* Top-left */
+    1px -1px 0 #000,   /* Top-right */
+    -1px 1px 0 #000,   /* Bottom-left */
+    1px 1px 0 #000,    /* Bottom-right */
+    0 0 5px #ffffff,   /* Small glow */
+    0 0 10px #ffffff,  /* Medium glow */
+    0 0 20px #ffffff,  /* Larger glow */
+    0 0 30px #ffffff;  /* Soft, outer glow */
+}
+
+.card-2 .card-back {
+    background:url('./assets/snow.PNG');
+    background-size: cover;
+    filter: drop-shadow(0 3px 1em #ffffff);
+    text-shadow: -1px -1px 0 #000,  /* Top-left */
+    1px -1px 0 #000,   /* Top-right */
+    -1px 1px 0 #000,   /* Bottom-left */
+    1px 1px 0 #000,    /* Bottom-right */
+    0 0 5px #ffffff,   /* Small glow */
+    0 0 10px #ffffff,  /* Medium glow */
+    0 0 20px #ffffff,  /* Larger glow */
+    0 0 30px #ffffff;  /* Soft, outer glow */
+}
+
+.card-3 .card-back {
+    background:url('./assets/MainMenu.png');
+    background-size: cover;
+    filter: drop-shadow(0 3px 1em #ffffff);
+    text-shadow: -1px -1px 0 #000,  /* Top-left */
+    1px -1px 0 #000,   /* Top-right */
+    -1px 1px 0 #000,   /* Bottom-left */
+    1px 1px 0 #000,    /* Bottom-right */
+    0 0 5px #ffffff,   /* Small glow */
+    0 0 10px #ffffff,  /* Medium glow */
+    0 0 20px #ffffff,  /* Larger glow */
+    0 0 30px #ffffff;  /* Soft, outer glow */
+}
+
+.card-4 .card-back {
+    background:url('./assets/tms.PNG');
+    background-size: cover;
+    filter: drop-shadow(0 3px 1em #ffffff);
+    text-shadow: -1px -1px 0 #000,  /* Top-left */
+    1px -1px 0 #000,   /* Top-right */
+    -1px 1px 0 #000,   /* Bottom-left */
+    1px 1px 0 #000,    /* Bottom-right */
+    0 0 5px #ffffff,   /* Small glow */
+    0 0 10px #ffffff,  /* Medium glow */
+    0 0 20px #ffffff,  /* Larger glow */
+    0 0 30px #ffffff;  /* Soft, outer glow */
+}
+
+.heading {
+    font-family: "Courier New", cursive;
+    filter: drop-shadow(0 2px 1em #9e4c00);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .projects-container {
+        height: auto; /* Allow height to adjust for smaller screens */
+        padding: 10px; /* Add padding for better spacing */
+    }
+
+    .card {
+        width: 150px; /* Reduce card width for medium devices */
+        height: 250px; /* Reduce card height for medium devices */
+        margin: 10px; /* Reduce margin for better spacing */
+    }
+}
+
+@media (max-width: 480px) {
+    .projects-container {
+        padding: 5px; /* Further reduce padding for smaller screens */
+    }
+
+    .card {
+        width: 100px; /* Further reduce card width for small devices */
+        height: 200px; /* Further reduce card height for small devices */
+        margin: 5px; /* Further reduce margin for better spacing */
+    }
+}
